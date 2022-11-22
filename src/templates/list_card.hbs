@@ -1,1 +1,1 @@
-<li><img src='{{flags.svg}}' width='30' style="margin-right: 20px; list-style:none;"/>{{this.name}}</li>
+{{#each this}}<li style="list-style:none;"><img src='{{this.flags.svg}}' width='30' style="margin-right: 20px; list-style:none;"/>{{this.name.official}}</li>{{/each}}
