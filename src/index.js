@@ -23,7 +23,6 @@ const onInputChange = event => {
           );
           infoEl.innerHTML = '';
           listEl.innerHTML = '';
-
           return;
       } else if (data.length > 1) {
           infoEl.innerHTML = '';
@@ -34,8 +33,10 @@ const onInputChange = event => {
         }
       })
       .catch(err => {
-        Notiflix.Notify.failure('Oops, there is no country with that name');
+        infoEl.innerHTML = '';
+        listEl.innerHTML = '';
         searchBoxEl.value = '';
+        Notiflix.Notify.failure('Oops, there is no country with that name');
       });
 }
 
